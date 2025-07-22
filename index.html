@@ -16,17 +16,14 @@
 <div class="panel">
   <audio id="bgm" src="0722.mp3" loop></audio>
 
+<audio id="bgm" src="https://raw.githubusercontent.com/meliqan1/justsite/main/music.mp3" loop preload="auto"></audio>
+
 <script>
-  // ფუნქცია მუსიკის ჩასართავად
   function enableAudio() {
-    const audio = document.getElementById("bgm");
-    audio.play();
-    // ინტერაქციის სმენარის მოხსნა — მხოლოდ ერთხელ გაჟღერდეს
+    document.getElementById("bgm").play();
     document.body.removeEventListener('click', enableAudio);
     document.body.removeEventListener('touchstart', enableAudio);
   }
-
-  // მოსმენა: როცა მომხმარებელი დააჭერს ან შეეხება საიტს
   document.body.addEventListener('click', enableAudio);
   document.body.addEventListener('touchstart', enableAudio);
 </script>
