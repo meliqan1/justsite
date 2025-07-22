@@ -21,6 +21,7 @@
 <script>
   function enableAudio() {
     document.getElementById("bgm").play();
+    .catch(e => console.error("Audio play failed:", e));
     document.body.removeEventListener('click', enableAudio);
     document.body.removeEventListener('touchstart', enableAudio);
   }
